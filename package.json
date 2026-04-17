@@ -1,0 +1,20 @@
+{
+  "name": "restaurant-system",
+  "version": "1.0.0",
+  "description": "Multi-channel Restaurant Ordering System",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "db:migrate": "npm run db:migrate --prefix server",
+    "db:generate": "npm run db:generate --prefix server",
+    "db:seed": "npm run db:seed --prefix server",
+    "db:reset": "npm run db:reset --prefix server",
+    "setup": "npm run install:all && npm run db:generate && npm run db:migrate && npm run db:seed"
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ]
+}
